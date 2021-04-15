@@ -56,23 +56,4 @@ public class SensitiveInfoUtils {
         return "";
     }
 
-    public static void main(String[] args) {
-        String str = "15691666954";
-        String concats = StringUtils.left(str, 2)
-                .concat(
-                        StringUtils.removeStart(
-                                StringUtils.leftPad(StringUtils.right(str, 2), StringUtils.length(str), "*"),
-                                "****")
-                );
-        String concats1 = StringUtils.left(str, 2)
-                .concat(
-                   StringUtils.removeStart(
-                        StringUtils.leftPad(StringUtils.right(str, 2), StringUtils.length(str), "*"),
-                   "**")
-                );
-        System.out.println(concats + "-------size----->" + StringUtils.length(concats));
-        System.out.println(concats1 + "-------size----->" + StringUtils.length(concats1));
-        String address = address(str, 4);
-        System.out.println(address);
-    }
 }
