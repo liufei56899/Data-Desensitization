@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/desensitization?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      idle-timeout: 3000
+      minimum-idle: 5
+      maximum-pool-size: 15
+      auto-commit: true
+      pool-name: HikariCP
+      max-lifetime: 1800000
+      connection-timeout: 3000
+      connection-test-query: SELECT 1
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 9999
+  servlet:
+    context-path: /demo
+
