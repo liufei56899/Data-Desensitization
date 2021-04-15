@@ -22,11 +22,6 @@ public class UserInfoController {
     @Autowired
     private UserInfoMapper mapper;
 
-    @PostConstruct
-    private void init(){
-        //mapper.init();
-    }
-
     @PostMapping("/add")
     public UserInfo save(){
         UserInfo user = UserInfo.builder()
